@@ -20,5 +20,32 @@
   <%= @burger.nutriscore %>
 </p>
 
+<p>
+  <strong>Code:</strong>
+  <%= @burger.code %>
+</p>
+
 <%= link_to 'Edit', edit_burger_path(@burger) %> |
 <%= link_to 'Back', burgers_path %>
+
+<br>
+<hr>
+<br>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nutriment</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @burger.nutriments.each do |nutriment| %>
+      <tr>
+        <td><%= nutriment[0].gsub("_", " ").gsub("-", " ").capitalize %></td>
+        <td><%= nutriment[1] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
