@@ -38,7 +38,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver', '~> 3.142.7'
-  gem 'rubyzip', '~> 1.2.2'
+  gem 'rubyzip', '~> 1.3.0'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~>  1.3.6'
 end
